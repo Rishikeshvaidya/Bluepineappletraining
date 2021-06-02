@@ -1,3 +1,5 @@
+/*................program.......................................*/
+
 #include<stdio.h>
 int main()
 {
@@ -13,3 +15,27 @@ int main()
 		printf("\n %c is not alphabet",c);
 	}
 }
+/*.............output......................................
+
+
+
+ Enter a Character:A
+
+ A is alphabet
+
+
+ Enter a Character:!
+
+ ! is not alphabet
+
+
+
+ Enter a Character:2
+
+ 2 is not alphabet
+--------------------------------
+Process exited after 2.384 seconds with return value 19
+Press any key to continue . . .
+
+
+........................................*/
