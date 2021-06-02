@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+	int n,i,a[10],r;
+	printf("enter a number:");
+	scanf("%lld",&n);
+	for(i=0;i<10;i++)
+	{
+		a[i]=0;
+	}
+	while(n!=0)
+	{
+		r=n%10;
+		a[r]++;
+		n=n/10;
+	}
+	for(i=0;i<10;i++)
+	{
+			printf("\n %d -> %d",i,a[i]);
+	}
+}
