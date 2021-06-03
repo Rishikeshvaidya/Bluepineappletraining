@@ -7,7 +7,7 @@ int main()
 {
 	string s;
 	int num;
-	cout<<"\n Enter number less than 100 :";
+	cout<<"\n Enter number  :";
 	cin>>num;
 	if(num==0)
 	{
@@ -74,7 +74,7 @@ string convert(int num)
 /*output
 
 
- Enter number less than 100 :12536569
+ Enter number  :12536569
 12536569 in words is :one  crore twenty five  lakh thirty six  thousand five  Hu
 ndread sixty nine
 --------------------------------
