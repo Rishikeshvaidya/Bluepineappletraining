@@ -2,9 +2,10 @@
 #include<stdio.h>
 int main()
 {
-	int n,i,j,sum=0;
+	unsigned long long int n,sum=0;
+	int i,j;
 	printf("\n Enter upto which number do u want to find perfect numbers:");
-	scanf("%d",&n);
+	scanf("%llu",&n);
 	for(i=1;i<=n;i++)
 	{
 		sum=0;
