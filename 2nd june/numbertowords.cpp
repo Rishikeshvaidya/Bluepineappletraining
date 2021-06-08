@@ -1,0 +1,103 @@
+/*.........................program..............................................*/
+#include<iostream>
+using namespace std;
+string fun(unsigned long long int  n);
+string convert(unsigned long long int  num);
+int main()
+{
+	string s;
+	unsigned long long int num;
+	cout<<"\n Enter number  :";
+	cin>>num;
+	if(num==0)
+	{
+		cout<<num<<" in words is :zero";
+	}
+	else{
+		s=convert(num);
+	cout<<num<<" in words is :"<<s;
+	}
+	
+}
+string fun(unsigned long long int  n)
+{
+	string str="";
+	string  units[]={"", "one ", "two ", "three ", "four ",
+                 "five ", "six ", "seven ", "eight ",
+                 "nine ", "ten ", "eleven ", "twelve ",
+                 "thirteen ", "fourteen ", "fifteen ",
+                 "sixteen ", "seventeen ", "eighteen ",
+                 "nineteen "};
+	
+	string tens[]={"", "", "twenty ", "thirty ", "forty ",
+                 "fifty ", "sixty ", "seventy ", "eighty ",
+                 "ninety "};
+   
+   if(n<20)
+   {
+   	  str=units[n];
+   }
+   else if(n>=20 && n<100)
+   {
+   	str=tens[n/10]+units[n%10];
+   }
+	return str;
+}
+
+string convert(unsigned long long int  num)
+{
+	string str="";
+
+	if(num<100)
+	{
+		str=fun(num);
+	}
+	else if(num>=100 && num<1000)   ///hundread2 
+	{
+		str=fun(num/100)+" Hundread "+convert(num%100);
+	}
+	else if(num>=1000 && num<100000)   ///thousand3 
+	{
+		str=fun(num/1000)+" thousand "+convert(num%1000);
+	}
+	else if(num>=100000 && num<10000000)   ///lakh5
+	{
+		str=fun(num/100000)+" lakh "+convert(num%100000);
+	}
+	else if(num>=10000000 && num<1000000000)   ///crore7
+	{
+		str=fun(num/10000000)+" crore "+convert(num%10000000);
+	}
+	else if(num>=1000000000 && num<100000000000)   ///arab9
+	{
+		str=fun(num/1000000000)+" arab "+convert(num%1000000000);
+	}
+	else if(num>=100000000000 && num<10000000000000)   ///kharv11
+	{
+		str=fun(num/100000000000)+" kharv "+convert(num%100000000000);
+	}
+	else if(num>=10000000000000 && num<1000000000000000)   ///neel13
+	{
+		str=fun(num/10000000000000)+" neel "+convert(num%10000000000000);
+	}
+	else if(num>=1000000000000000 && num<100000000000000000)   ///padam15
+	{
+		str=fun(num/1000000000000000)+" padam "+convert(num%1000000000000000);
+	}
+//	else if(num>=100000000000000000 && num<=9200000000000000000)   ///shankh17
+//	{
+//		str=fun(num/100000000000000000)+" shankh "+convert(num%100000000000000000);
+//	}
+	return str;
+}
+
+/*output
+
+
+ Enter number  :12536569
+12536569 in words is :one  crore twenty five  lakh thirty six  thousand five  Hu
+ndread sixty nine
+--------------------------------
+Process exited after 6.241 seconds with return value 0
+Press any key to continue . . .
+*/
