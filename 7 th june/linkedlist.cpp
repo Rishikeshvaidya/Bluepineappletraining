@@ -1,5 +1,5 @@
 #include<iostream>
-//#include<stdlib.h>
+#include<bits/stdc++.h>
 using namespace std;
 class node{
 
@@ -23,8 +23,8 @@ class node{
             cout<<"\nEnter cost of book : ";
             cin>>book_cost;
             cout<<"\nEnter author of book : ";
-            cin>>book_author;
-            nn=new node;
+           getline(cin>>ws,book_author);
+            nn=new node();
             nn->book_id=book_id;
             nn->book_cost=book_cost;
             nn->book_author=book_author;
@@ -72,9 +72,9 @@ class node{
             cin>>book_id;
             cout<<"\nEnter cost of book : ";
             cin>>book_cost;
-            cout<<"\nEnter author of book : ";
-            cin>>book_author;
-    	nn=new node;
+           cout<<"\nEnter author of book : ";
+           getline(cin>>ws,book_author);
+    	nn=new node();
     	nn->book_id=book_id;
     	nn->book_cost=book_cost;
     	nn->book_author=book_author;
@@ -102,8 +102,8 @@ class node{
         cout<<"\nEnter cost of book : ";
         cin>>book_cost;
         cout<<"\nEnter author of book : ";
-        cin>>book_author;
-    	nn=new node;
+           getline(cin>>ws,book_author);
+    	nn=new node();
     	nn->book_id=book_id;
     	nn->book_cost=book_cost;
     	nn->book_author=book_author;
@@ -127,8 +127,8 @@ class node{
         cout<<"\nEnter cost of book : ";
         cin>>book_cost;
         cout<<"\nEnter author of book : ";
-        cin>>book_author;
-    	nn=new node;
+           getline(cin>>ws,book_author);
+    	nn=new node();
     	nn->book_id=book_id;
     	nn->book_cost=book_cost;
     	nn->book_author=book_author;
