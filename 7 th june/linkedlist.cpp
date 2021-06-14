@@ -207,7 +207,7 @@ class node{
 };
 int main()
 {
-    class node n,*head;
+    class node n,*head;    /// Encapsulation
     int ch;
     bool x;
     cout<<"\n\t\t\t Book Management System\n\n";
